@@ -43,23 +43,25 @@ export default function Header() {
           <span className="logo-text">Phoenix<span className="logo-dot">.</span></span>
         </a>
 
-        {/* 네비게이션 */}
-        <nav className={`nav ${menuOpen ? 'open' : ''}`}>
-          {navLinks.map(link => (
-            <a
-              key={link.href}
-              href={link.href}
-              className="nav-link"
-              onClick={() => setMenuOpen(false)}
-            >
-              {link.label}
-            </a>
-          ))}
-          <a href="#contact" className="btn-primary nav-cta">문의하기</a>
-        </nav>
+        {/* 오른쪽 그룹: 네비 + 컨트롤 */}
+        <div className="header-right">
 
-        {/* 우측 컨트롤 영역 */}
-        <div className="header-controls">
+          <nav className={`nav ${menuOpen ? 'open' : ''}`}>
+            {navLinks.map(link => (
+              <a
+                key={link.href}
+                href={link.href}
+                className="nav-link"
+                onClick={() => setMenuOpen(false)}
+              >
+                {link.label}
+              </a>
+            ))}
+            <a href="#contact" className="btn-primary nav-cta">문의하기</a>
+          </nav>
+
+          {/* 컨트롤 영역 */}
+          <div className="header-controls">
 
           {/* 다크/라이트 토글 */}
           <button
@@ -114,6 +116,8 @@ export default function Header() {
             <span /><span /><span />
           </button>
         </div>
+
+        </div>{/* /header-right */}
 
       </div>
     </header>
