@@ -10,16 +10,14 @@
 .hero-bg {
   position: absolute;
   inset: 0;
-  background: radial-gradient(ellipse at 30% 50%, rgba(42, 82, 190, 0.15) 0%, transparent 60%),
-              radial-gradient(ellipse at 80% 20%, rgba(26, 74, 46, 0.1) 0%, transparent 50%),
-              linear-gradient(135deg, var(--bg-primary) 0%, var(--bg-secondary) 100%);
+  background: var(--hero-gradient);
 }
 
 .hero-bg::after {
   content: '';
   position: absolute;
   inset: 0;
-  background-image: radial-gradient(circle, rgba(42, 82, 190, 0.08) 1px, transparent 1px);
+  background-image: radial-gradient(circle, var(--dot-color) 1px, transparent 1px);
   background-size: 40px 40px;
 }
 
@@ -32,8 +30,8 @@
 .hero-badge {
   display: inline-block;
   padding: var(--spacing-xs) var(--spacing-md);
-  background: rgba(42, 82, 190, 0.15);
-  border: 1px solid rgba(42, 82, 190, 0.4);
+  background: var(--border-accent);
+  border: 1px solid var(--border-accent);
   border-radius: var(--border-radius-xl);
   font-size: var(--font-size-sm);
   color: var(--color-royal-blue-light);
@@ -46,7 +44,7 @@
   font-size: clamp(2.5rem, 6vw, var(--font-size-5xl));
   font-weight: 700;
   line-height: 1.2;
-  color: var(--color-white);
+  color: var(--color-text);
   margin-bottom: var(--spacing-xl);
 }
 
@@ -74,7 +72,7 @@
 .scroll-indicator {
   width: 24px;
   height: 40px;
-  border: 2px solid rgba(42, 82, 190, 0.4);
+  border: 2px solid var(--border-accent);
   border-radius: 12px;
   position: relative;
 }
@@ -101,8 +99,8 @@
 .stats-section {
   background: var(--bg-secondary);
   padding: var(--spacing-2xl) 0;
-  border-top: 1px solid rgba(42, 82, 190, 0.15);
-  border-bottom: 1px solid rgba(42, 82, 190, 0.15);
+  border-top: 1px solid var(--border-accent);
+  border-bottom: 1px solid var(--border-accent);
 }
 
 .stats-grid {
@@ -145,7 +143,7 @@
   background: var(--bg-card);
   border-radius: var(--border-radius-lg);
   padding: var(--spacing-2xl);
-  border: 1px solid rgba(255, 255, 255, 0.05);
+  border: 1px solid var(--border-color);
   transition: transform var(--transition-base), box-shadow var(--transition-base);
   position: relative;
   overflow: hidden;
@@ -177,7 +175,7 @@
 .service-title {
   font-size: var(--font-size-xl);
   font-weight: 600;
-  color: var(--color-white);
+  color: var(--color-text);
   margin-bottom: var(--spacing-md);
 }
 
@@ -192,11 +190,11 @@
   font-size: var(--font-size-sm);
   color: var(--color-royal-blue-light);
   font-weight: 500;
-  transition: gap var(--transition-fast);
+  transition: color var(--transition-fast);
 }
 
 .service-link:hover {
-  color: var(--color-white);
+  color: var(--color-text);
 }
 
 /* About */
@@ -229,12 +227,12 @@
   border-radius: var(--border-radius-lg);
   padding: var(--spacing-2xl) var(--spacing-xl);
   text-align: center;
-  border: 1px solid rgba(42, 82, 190, 0.2);
+  border: 1px solid var(--border-accent);
 }
 
 .about-card--accent {
-  background: rgba(42, 82, 190, 0.1);
-  border-color: rgba(42, 82, 190, 0.4);
+  background: var(--border-accent);
+  border-color: var(--color-royal-blue);
 }
 
 .about-year {
@@ -259,8 +257,8 @@
 }
 
 .cta-box {
-  background: linear-gradient(135deg, rgba(42, 82, 190, 0.2) 0%, rgba(26, 74, 46, 0.1) 100%);
-  border: 1px solid rgba(42, 82, 190, 0.3);
+  background: var(--cta-gradient);
+  border: 1px solid var(--cta-border);
   border-radius: var(--border-radius-xl);
   padding: var(--spacing-3xl);
   text-align: center;
@@ -269,7 +267,7 @@
 .cta-title {
   font-size: var(--font-size-3xl);
   font-weight: 700;
-  color: var(--color-white);
+  color: var(--color-text);
   margin-bottom: var(--spacing-md);
 }
 
