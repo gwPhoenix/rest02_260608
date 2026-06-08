@@ -63,7 +63,7 @@
 | 틸 | `#0e7490` / `#22d3ee` | 퍼플 + 오렌지 |
 
 #### 헤더 UI 개선
-- `[문의하기]` 버튼 바로 뒤에 `[☀️/🌙 토글]` `[● 팔레트 선택]` 배치
+- `[문의하기]` 버튼 바로 뒤에 테마 토글·팔레트 선택 버튼 인접 배치
 - nav + controls를 `header-right`로 묶어 간격 최소화
 - 팔레트 드롭다운: 스와치 원형 + 이름 + 현재 선택 체크 표시
 - 팔레트 버튼 색상이 현재 선택된 palette swatch로 실시간 반영
@@ -76,10 +76,50 @@
 ### 수정된 파일
 - `src/context/ThemeContext.jsx` (신규)
 - `src/styles/variables.css` (전면 재구성)
-- `src/components/Header.jsx` (토글·팔레트 UI 추가)
-- `src/components/Header.css` (header-right 레이아웃)
-- `src/pages/Home.css` (하드코딩 색상 → 변수 교체)
-- `src/index.css` (body transition 추가)
+- `src/components/Header.jsx` / `Header.css`
+- `src/pages/Home.css`
+- `src/index.css`
+
+---
+
+## 2026-06-08 — v0.3.0 아이콘 시스템 전환 (이모지 → Material Symbols)
+
+### 작업 내용
+
+#### 아이콘 시스템 도입
+- Google Fonts **Material Symbols Rounded** 적용 (weight 300, filled 0)
+- Rounded 변형 선택 이유: 직선 대비 곡선 형태가 더 감성적·부드러운 인상 전달
+- `src/components/Icon.jsx` 공통 컴포넌트 생성
+  - `name` (아이콘명), `size` (폰트 크기), `className`, `style` props 지원
+
+#### 전체 이모지 제거 및 아이콘 교체
+| 위치 | 변경 전 | 변경 후 |
+|---|---|---|
+| 헤더 테마 토글 | ☀️ / 🌙 | `light_mode` / `dark_mode` |
+| 헤더 팔레트 버튼 | 원형 스와치만 | `palette` 아이콘 |
+| 헤더 팔레트 체크 | ✓ 텍스트 | `check` 아이콘 |
+| 서비스 카드 | 🖥️ ⚙️ 🌐 | `computer` / `code_blocks` / `language` |
+| Stats 항목 | 없음 | `history` / `groups` / `rocket_launch` / `verified` |
+| Hero 뱃지 | 없음 | `calendar_today` |
+| Hero 버튼 | 없음 | `grid_view` / `mail_outline` |
+| About 카드 | 없음 | `apartment` / `workspace_premium` |
+| CTA 섹션 | 없음 | `handshake` / `send` |
+| Footer 연락처 | 📧 📞 📍 | `mail_outline` / `phone` / `location_on` |
+| Footer Since | 없음 | `history` |
+
+#### UI 디테일 개선
+- 서비스 카드 아이콘을 56px 박스(subtle bg)로 감싸 카드 레이아웃 강화
+- 호버 시 아이콘 박스 배경색 전환 효과 추가
+- `자세히 보기 →` 화살표 → `arrow_forward` 아이콘으로 교체, 호버 시 gap 확장
+- 버튼(`btn-primary`, `btn-outline`) inline-flex + gap으로 아이콘 정렬 통일
+
+### 수정된 파일
+- `index.html` (Material Symbols 폰트 링크 추가, 페이지 title 수정)
+- `src/components/Icon.jsx` (신규)
+- `src/components/Header.jsx` / `Header.css`
+- `src/components/Footer.jsx` / `Footer.css`
+- `src/pages/Home.jsx` / `Home.css`
+- `src/index.css` (Material Symbols 기본 스타일, 버튼 flex 정렬)
 
 ---
 
