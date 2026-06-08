@@ -1,0 +1,67 @@
+:root {
+  /* Main Colors */
+  --color-dark-blue: #0d1b2a;
+  --color-dark-blue-2: #1a2f4a;
+  --color-royal-blue: #2a52be;
+  --color-royal-blue-light: #4169e1;
+  --color-royal-blue-hover: #3a62ce;
+
+  /* Accent Colors */
+  --color-dark-green: #1a4a2e;
+  --color-dark-green-light: #2d6a42;
+  --color-dark-red: #8b1a1a;
+  --color-dark-red-light: #a82424;
+
+  /* Neutral Colors */
+  --color-white: #ffffff;
+  --color-light: #f0f4f8;
+  --color-light-gray: #e2e8f0;
+  --color-gray: #94a3b8;
+  --color-dark-gray: #334155;
+  --color-text: #e2e8f0;
+  --color-text-muted: #94a3b8;
+
+  /* Backgrounds */
+  --bg-primary: #0d1b2a;
+  --bg-secondary: #1a2f4a;
+  --bg-card: #162035;
+  --bg-nav: rgba(13, 27, 42, 0.95);
+
+  /* Typography */
+  --font-primary: 'Noto Sans KR', 'Segoe UI', sans-serif;
+  --font-size-xs: 0.75rem;
+  --font-size-sm: 0.875rem;
+  --font-size-base: 1rem;
+  --font-size-lg: 1.125rem;
+  --font-size-xl: 1.25rem;
+  --font-size-2xl: 1.5rem;
+  --font-size-3xl: 1.875rem;
+  --font-size-4xl: 2.25rem;
+  --font-size-5xl: 3rem;
+
+  /* Spacing */
+  --spacing-xs: 0.25rem;
+  --spacing-sm: 0.5rem;
+  --spacing-md: 1rem;
+  --spacing-lg: 1.5rem;
+  --spacing-xl: 2rem;
+  --spacing-2xl: 3rem;
+  --spacing-3xl: 4rem;
+
+  /* Border */
+  --border-radius-sm: 4px;
+  --border-radius-md: 8px;
+  --border-radius-lg: 12px;
+  --border-radius-xl: 20px;
+
+  /* Shadow */
+  --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.3);
+  --shadow-md: 0 4px 12px rgba(0, 0, 0, 0.4);
+  --shadow-lg: 0 10px 30px rgba(0, 0, 0, 0.5);
+  --shadow-royal: 0 4px 20px rgba(42, 82, 190, 0.3);
+
+  /* Transitions */
+  --transition-fast: 0.2s ease;
+  --transition-base: 0.3s ease;
+  --transition-slow: 0.5s ease;
+}
