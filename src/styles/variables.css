@@ -1,110 +1,153 @@
-/* ── Dark Mode (기본) ── */
+/* ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+   팔레트 (5종) — accent 색상만 정의
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */
+:root,
+[data-palette='blue'] {
+  --palette-primary:   #2a52be;
+  --palette-light:     #4169e1;
+  --palette-hover:     #3a62ce;
+  --palette-secondary: #2d6a42;
+  --palette-tertiary:  #a82424;
+  --palette-glow:      rgba(42, 82, 190, 0.25);
+  --palette-subtle:    rgba(42, 82, 190, 0.12);
+  --palette-border:    rgba(42, 82, 190, 0.25);
+}
+
+[data-palette='green'] {
+  --palette-primary:   #059669;
+  --palette-light:     #10b981;
+  --palette-hover:     #047857;
+  --palette-secondary: #2a52be;
+  --palette-tertiary:  #a82424;
+  --palette-glow:      rgba(16, 185, 129, 0.25);
+  --palette-subtle:    rgba(16, 185, 129, 0.12);
+  --palette-border:    rgba(16, 185, 129, 0.25);
+}
+
+[data-palette='purple'] {
+  --palette-primary:   #7c3aed;
+  --palette-light:     #a78bfa;
+  --palette-hover:     #6d28d9;
+  --palette-secondary: #10b981;
+  --palette-tertiary:  #f59e0b;
+  --palette-glow:      rgba(167, 139, 250, 0.25);
+  --palette-subtle:    rgba(167, 139, 250, 0.12);
+  --palette-border:    rgba(167, 139, 250, 0.25);
+}
+
+[data-palette='orange'] {
+  --palette-primary:   #b45309;
+  --palette-light:     #f59e0b;
+  --palette-hover:     #92400e;
+  --palette-secondary: #2a52be;
+  --palette-tertiary:  #a82424;
+  --palette-glow:      rgba(245, 158, 11, 0.25);
+  --palette-subtle:    rgba(245, 158, 11, 0.12);
+  --palette-border:    rgba(245, 158, 11, 0.25);
+}
+
+[data-palette='teal'] {
+  --palette-primary:   #0e7490;
+  --palette-light:     #22d3ee;
+  --palette-hover:     #0c6478;
+  --palette-secondary: #7c3aed;
+  --palette-tertiary:  #f59e0b;
+  --palette-glow:      rgba(34, 211, 238, 0.25);
+  --palette-subtle:    rgba(34, 211, 238, 0.12);
+  --palette-border:    rgba(34, 211, 238, 0.25);
+}
+
+/* ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+   다크 모드 (기본)
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */
 :root,
 [data-theme='dark'] {
-  --color-dark-blue: #0d1b2a;
-  --color-dark-blue-2: #1a2f4a;
-  --color-royal-blue: #2a52be;
-  --color-royal-blue-light: #4169e1;
-  --color-royal-blue-hover: #3a62ce;
+  --color-royal-blue:       var(--palette-primary);
+  --color-royal-blue-light: var(--palette-light);
+  --color-royal-blue-hover: var(--palette-hover);
+  --color-dark-green-light: var(--palette-secondary);
+  --color-dark-red-light:   var(--palette-tertiary);
 
-  --color-dark-green: #1a4a2e;
-  --color-dark-green-light: #2d6a42;
-  --color-dark-red: #8b1a1a;
-  --color-dark-red-light: #a82424;
-
-  --color-white: #ffffff;
-  --color-light: #f0f4f8;
-  --color-light-gray: #e2e8f0;
-  --color-gray: #94a3b8;
-  --color-dark-gray: #334155;
-  --color-text: #e2e8f0;
+  --color-text:       #e2e8f0;
   --color-text-muted: #94a3b8;
+  --color-white:      #ffffff;
 
-  --bg-primary: #0d1b2a;
-  --bg-secondary: #1a2f4a;
-  --bg-card: #162035;
-  --bg-nav: rgba(13, 27, 42, 0.95);
+  --bg-primary:  #0d1b2a;
+  --bg-secondary:#1a2f4a;
+  --bg-card:     #162035;
+  --bg-nav:      rgba(13, 27, 42, 0.95);
 
-  --border-color: rgba(255, 255, 255, 0.07);
-  --border-accent: rgba(42, 82, 190, 0.25);
+  --border-color:  rgba(255, 255, 255, 0.07);
+  --border-accent: var(--palette-border);
 
-  --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.3);
-  --shadow-md: 0 4px 12px rgba(0, 0, 0, 0.4);
-  --shadow-lg: 0 10px 30px rgba(0, 0, 0, 0.5);
-  --shadow-royal: 0 4px 20px rgba(42, 82, 190, 0.3);
+  --shadow-sm:    0 1px 3px rgba(0,0,0,0.3);
+  --shadow-md:    0 4px 12px rgba(0,0,0,0.4);
+  --shadow-lg:    0 10px 30px rgba(0,0,0,0.5);
+  --shadow-royal: 0 4px 20px var(--palette-glow);
 
-  --hero-gradient: radial-gradient(ellipse at 30% 50%, rgba(42, 82, 190, 0.15) 0%, transparent 60%),
-                   radial-gradient(ellipse at 80% 20%, rgba(26, 74, 46, 0.1) 0%, transparent 50%),
+  --hero-gradient: radial-gradient(ellipse at 30% 50%, var(--palette-subtle) 0%, transparent 60%),
+                   radial-gradient(ellipse at 80% 20%, rgba(26, 74, 46, 0.08) 0%, transparent 50%),
                    linear-gradient(135deg, #0d1b2a 0%, #1a2f4a 100%);
-  --dot-color: rgba(42, 82, 190, 0.08);
-
-  --stat-bg: #1a2f4a;
-  --cta-gradient: linear-gradient(135deg, rgba(42, 82, 190, 0.2) 0%, rgba(26, 74, 46, 0.1) 100%);
-  --cta-border: rgba(42, 82, 190, 0.3);
+  --dot-color:     var(--palette-subtle);
+  --cta-gradient:  linear-gradient(135deg, var(--palette-subtle) 0%, rgba(26,74,46,0.08) 100%);
+  --cta-border:    var(--palette-border);
 }
 
-/* ── Light Mode ── */
+/* ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+   라이트 모드
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */
 [data-theme='light'] {
-  --color-dark-blue: #1e3a5f;
-  --color-dark-blue-2: #2a4a7a;
-  --color-royal-blue: #2a52be;
-  --color-royal-blue-light: #1a3fa8;
-  --color-royal-blue-hover: #1e46b8;
+  --color-royal-blue:       var(--palette-primary);
+  --color-royal-blue-light: var(--palette-primary);
+  --color-royal-blue-hover: var(--palette-hover);
+  --color-dark-green-light: var(--palette-secondary);
+  --color-dark-red-light:   var(--palette-tertiary);
 
-  --color-dark-green: #155724;
-  --color-dark-green-light: #1e7a3c;
-  --color-dark-red: #7f1d1d;
-  --color-dark-red-light: #9b2222;
-
-  --color-white: #1a2f4a;
-  --color-light: #1e3a5f;
-  --color-light-gray: #334d6e;
-  --color-gray: #4a6080;
-  --color-dark-gray: #cbd5e1;
-  --color-text: #1e293b;
+  --color-text:       #1e293b;
   --color-text-muted: #475569;
+  --color-white:      #1a2f4a;
 
-  --bg-primary: #f8fafc;
-  --bg-secondary: #eef2f7;
-  --bg-card: #ffffff;
-  --bg-nav: rgba(248, 250, 252, 0.95);
+  --bg-primary:  #f8fafc;
+  --bg-secondary:#eef2f7;
+  --bg-card:     #ffffff;
+  --bg-nav:      rgba(248, 250, 252, 0.95);
 
-  --border-color: rgba(0, 0, 0, 0.08);
-  --border-accent: rgba(42, 82, 190, 0.2);
+  --border-color:  rgba(0, 0, 0, 0.08);
+  --border-accent: var(--palette-border);
 
-  --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.08);
-  --shadow-md: 0 4px 12px rgba(0, 0, 0, 0.1);
-  --shadow-lg: 0 10px 30px rgba(0, 0, 0, 0.12);
-  --shadow-royal: 0 4px 20px rgba(42, 82, 190, 0.2);
+  --shadow-sm:    0 1px 3px rgba(0,0,0,0.08);
+  --shadow-md:    0 4px 12px rgba(0,0,0,0.1);
+  --shadow-lg:    0 10px 30px rgba(0,0,0,0.12);
+  --shadow-royal: 0 4px 20px var(--palette-glow);
 
-  --hero-gradient: radial-gradient(ellipse at 30% 50%, rgba(42, 82, 190, 0.08) 0%, transparent 60%),
-                   radial-gradient(ellipse at 80% 20%, rgba(26, 74, 46, 0.06) 0%, transparent 50%),
+  --hero-gradient: radial-gradient(ellipse at 30% 50%, var(--palette-subtle) 0%, transparent 60%),
+                   radial-gradient(ellipse at 80% 20%, rgba(26,74,46,0.05) 0%, transparent 50%),
                    linear-gradient(135deg, #f8fafc 0%, #eef2f7 100%);
-  --dot-color: rgba(42, 82, 190, 0.05);
-
-  --stat-bg: #eef2f7;
-  --cta-gradient: linear-gradient(135deg, rgba(42, 82, 190, 0.08) 0%, rgba(26, 74, 46, 0.05) 100%);
-  --cta-border: rgba(42, 82, 190, 0.2);
+  --dot-color:     var(--palette-subtle);
+  --cta-gradient:  linear-gradient(135deg, var(--palette-subtle) 0%, rgba(26,74,46,0.04) 100%);
+  --cta-border:    var(--palette-border);
 }
 
-/* ── 공통 토큰 ── */
+/* ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+   공통 토큰
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */
 :root {
-  --font-primary: 'Noto Sans KR', 'Segoe UI', sans-serif;
-  --font-size-xs: 0.75rem;
-  --font-size-sm: 0.875rem;
+  --font-primary:   'Noto Sans KR', 'Segoe UI', sans-serif;
+  --font-size-xs:   0.75rem;
+  --font-size-sm:   0.875rem;
   --font-size-base: 1rem;
-  --font-size-lg: 1.125rem;
-  --font-size-xl: 1.25rem;
-  --font-size-2xl: 1.5rem;
-  --font-size-3xl: 1.875rem;
-  --font-size-4xl: 2.25rem;
-  --font-size-5xl: 3rem;
+  --font-size-lg:   1.125rem;
+  --font-size-xl:   1.25rem;
+  --font-size-2xl:  1.5rem;
+  --font-size-3xl:  1.875rem;
+  --font-size-4xl:  2.25rem;
+  --font-size-5xl:  3rem;
 
-  --spacing-xs: 0.25rem;
-  --spacing-sm: 0.5rem;
-  --spacing-md: 1rem;
-  --spacing-lg: 1.5rem;
-  --spacing-xl: 2rem;
+  --spacing-xs:  0.25rem;
+  --spacing-sm:  0.5rem;
+  --spacing-md:  1rem;
+  --spacing-lg:  1.5rem;
+  --spacing-xl:  2rem;
   --spacing-2xl: 3rem;
   --spacing-3xl: 4rem;
 
