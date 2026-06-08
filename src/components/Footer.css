@@ -74,8 +74,18 @@
 }
 
 .footer-contact ul li {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-sm);
   font-size: var(--font-size-sm);
   color: var(--color-text-muted);
+}
+
+.footer-icon {
+  font-size: 1rem !important;
+  color: var(--color-royal-blue-light);
+  flex-shrink: 0;
+  opacity: 0.8;
 }
 
 .footer-bottom {
@@ -89,6 +99,9 @@
 }
 
 .footer-since {
+  display: flex;
+  align-items: center;
+  gap: 5px;
   color: var(--color-royal-blue-light);
   font-weight: 500;
 }

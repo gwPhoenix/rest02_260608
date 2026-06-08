@@ -66,8 +66,15 @@ button {
   margin-bottom: var(--spacing-2xl);
 }
 
+.btn-primary,
+.btn-outline {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--spacing-sm);
+}
+
 .btn-primary {
-  display: inline-block;
+  display: inline-flex;
   padding: var(--spacing-md) var(--spacing-xl);
   background-color: var(--color-royal-blue);
   color: var(--color-white);
@@ -108,6 +115,23 @@ button {
 
 .highlight-blue {
   color: var(--color-royal-blue-light);
+}
+
+.material-symbols-rounded {
+  font-family: 'Material Symbols Rounded';
+  font-weight: normal;
+  font-style: normal;
+  font-size: 1.25rem;
+  line-height: 1;
+  letter-spacing: normal;
+  text-transform: none;
+  display: inline-flex;
+  align-items: center;
+  white-space: nowrap;
+  word-wrap: normal;
+  direction: ltr;
+  -webkit-font-smoothing: antialiased;
+  user-select: none;
 }
 
 ::-webkit-scrollbar {

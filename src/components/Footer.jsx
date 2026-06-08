@@ -1,3 +1,4 @@
+import Icon from './Icon'
 import './Footer.css'
 
 export default function Footer() {
@@ -40,16 +41,28 @@ export default function Footer() {
           <div className="footer-contact">
             <h4>연락처</h4>
             <ul>
-              <li>📧 contact@gwphoenix.co.kr</li>
-              <li>📞 02-000-0000</li>
-              <li>📍 서울특별시</li>
+              <li>
+                <Icon name="mail_outline" className="footer-icon" />
+                contact@gwphoenix.co.kr
+              </li>
+              <li>
+                <Icon name="phone" className="footer-icon" />
+                02-000-0000
+              </li>
+              <li>
+                <Icon name="location_on" className="footer-icon" />
+                서울특별시
+              </li>
             </ul>
           </div>
         </div>
 
         <div className="footer-bottom">
           <p>&copy; 2003–{new Date().getFullYear()} GW Phoenix. All rights reserved.</p>
-          <p className="footer-since">Since 2003.09.23</p>
+          <p className="footer-since">
+            <Icon name="history" size="0.875rem" />
+            Since 2003.09.23
+          </p>
         </div>
       </div>
     </footer>

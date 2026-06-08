@@ -213,10 +213,19 @@
   text-align: left;
 }
 
-.palette-check {
-  font-size: var(--font-size-xs);
+.palette-check-icon {
+  font-size: 1rem !important;
   color: var(--color-royal-blue-light);
-  font-weight: 700;
+}
+
+.ctrl-icon {
+  font-size: 1.2rem !important;
+  color: var(--color-text-muted);
+  transition: color var(--transition-fast);
+}
+
+.ctrl-btn:hover .ctrl-icon {
+  color: var(--color-royal-blue-light);
 }
 
 /* ── 햄버거 (모바일) ── */
